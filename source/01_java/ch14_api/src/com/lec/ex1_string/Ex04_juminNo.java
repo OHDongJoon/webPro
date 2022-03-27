@@ -21,7 +21,7 @@ public class Ex04_juminNo {
 //							(gender==2||gender==4)? "여자":"오류";
 		// 방법3. 
 		String gender = juminNo.substring(7,8);  // 001212-41212   "4"
-		String msg = (gender=="1")||gender.equals("3")) ? "남자":
+		String msg = (gender.equals("1")||gender.equals("3")) ? "남자":
 							(gender.equals("2") || gender.equals("4"))? "여자":"오류";
 		System.out.printf("당신은 %s입니다",msg);
 		scanner.close();
