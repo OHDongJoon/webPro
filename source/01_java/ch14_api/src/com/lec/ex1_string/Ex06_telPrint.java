@@ -21,10 +21,14 @@ public class Ex06_telPrint {
 			System.out.print(tel.charAt(i));
 		}
 		System.out.println();
-		String pre = "전화번호 앞자리";   // 010-9898-9898   02-789-1234
-		String post = "전화번호 뒷자리";
+		int first = tel.indexOf('-');     // 첫 -가 나오는 위치 
+		int last  = tel.lastIndexOf('-'); // 마지막 -가 나오는 위치
+		String pre = tel.substring(0, first);   // 010-9898-9898   02-789-1234
+		String post = tel.substring(last+1);
+		String mid = tel.substring(first+1, last);
 		System.out.println("전화번호 앞자리 : "+pre);
 		System.out.println("전화번호 뒷자리 : "+post);
+		System.out.println("전화번호 중간자리 : "+mid);
 	}
 }
 
