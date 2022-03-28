@@ -19,6 +19,7 @@ public class Ex08_FriendSearchTestMain {
 				// idx번째의 Friend객체 전화번호 뒷자리 추출
 				String tel = friends[idx].getPhone();
 				String post = tel.substring(tel.lastIndexOf('-')+1);
+//				String post = friends[idx].getPhone().substring(friends[idx].getPhone().lastIndexOf('-')+1);
 				if(post.equals(searchTel)) {
 					System.out.println(friends[idx]);
 					searchOk = true;
