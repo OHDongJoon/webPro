@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Ex06_telPrint {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		do {
+		while(true) {
 			System.out.print("전화번호를 입력하세요(010-9898-1234 형식)");
 			String tel = sc.next(); // 스트링 입력
 			if(tel.equalsIgnoreCase("x")) break;
@@ -31,7 +31,7 @@ public class Ex06_telPrint {
 			System.out.println("전화번호 앞자리 : "+pre);
 			System.out.println("전화번호 뒷자리 : "+post);
 			System.out.println("전화번호 중간자리 : "+mid);
-		}while(true);
+		}
 	}
 }
 
