@@ -4,7 +4,7 @@ public class Ex04_date {
 	public static void main(String[] args) {
 		Date date = new Date();
 		System.out.println(date); // 가독성 저하
-		int year  = date.getYear();
+		int year  = date.getYear() + 1900;
 		int month = date.getMonth()+1; // 0~11월
 		int day   = date.getDate(); // 일
 		System.out.printf("%d년 %d월 %d일\n", year, month, day);
