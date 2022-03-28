@@ -21,7 +21,7 @@ public class Ex06_telPrint {
 			System.out.print(tel.charAt(i));
 		}
 		System.out.println();
-		String pre = "전화번호 앞자리";
+		String pre = "전화번호 앞자리";   // 010-9898-9898   02-789-1234
 		String post = "전화번호 뒷자리";
 		System.out.println("전화번호 앞자리 : "+pre);
 		System.out.println("전화번호 뒷자리 : "+post);
