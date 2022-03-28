@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ex08_FriendSearchTestMain {
 	public static void main(String[] args) {
 		Friend[] friends = {new Friend("홍길동", "010-9999-9999", "05-22"),
-				new Friend("신길동", "010-8888-8888", "09-22"),
+				new Friend("신길동", "010-8888-8888", "03-28"),
 				new Friend("마길동", "010-8888-9999", "08-22"),
 				new Friend("윤길동", "010-7777-7777", "04-22"),
 				new Friend("김길동", "010-6666-7777", "03-22")};
