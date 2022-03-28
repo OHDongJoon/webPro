@@ -20,5 +20,6 @@ public class Ex07_searchTel {
 		if(! searchOk) { // saerchTel이 배열 전화에 없어서 못찾고 idx가 끝까지 간 경우
 			System.out.println("검색하신 전화번호는 없습니다");
 		}
+		sc.close();
 	}
 }
