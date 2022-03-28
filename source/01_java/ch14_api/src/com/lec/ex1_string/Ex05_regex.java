@@ -16,9 +16,25 @@ public class Ex05_regex {
 		 		{2,4} (2~4È¸ ¹İº¹)
 		 3. Á¤±ÔÇ¥Çö½Ä ¿¬½ÀÀå : https://regexr.com   https://www.regexpal.com 
 		       ex. ÀüÈ­¹øÈ£ : .?[0-9]{2,3}.[0-9]{3,4}-[0-9]{4}
+		                        ÀÌ¸ŞÀÏ : 
 		 4. Æ¯Á¤ Á¤±ÔÇ¥Çö½ÄÀÇ ¹®ÀÚ¿­ º¯°æ : replaceAll("Á¤±ÔÇ¥Çö½Ä" , "´ëÃ¼¹®ÀÚ¿­")         
 		 */
-		String str = "010-9999-9999 yisy0703@naver.com  (02)565-8888  ¹İ°©½À´Ï´Ù. Hello 951212-2521251 010-7777-8888";
+		String str = "010-9999-9999 yisy0703@naver.com  (02)565-8888  ¹İ°©½À´Ï´Ù. ¤¾¤¾ Hello 951212-2521251 abc@sds.co.kr";
+		// ÀüÈ­¹øÈ£ ÁöÃã
 		System.out.println(str.replaceAll("[(]?[0-9]{2,3}\\D[0-9]{3,4}-[0-9]{4}", "** ÀüÈ­¹øÈ£ Áö¿ò **"));
+		// ÀÌ¸ŞÀÏ Áö¿ò
+		System.out.println(str.replaceAll("\\w+@\\w+(.\\w+){1,2}", "**ÀÌ¸ŞÀÏ Áö¿ò**"));
+		// ¾ËÆÄºª ´ë½Å *·Î ´ëÃ¼
+		System.out.println(str.replaceAll("[a-zA-Z]", "*"));
+		// ÇÑ±Û ½Ï ´Ù ¾ø¾Ö
+		System.out.println(str.replaceAll("[°¡-ÆR¤¡-¤¾]", ""));
+		// ÁÖ¹Î¹øÈ£ µŞÀÚ¸®¸¦ *·Î ´ëÃ¼
+		System.out.println(str.replaceAll("[0-9]{7}", "*******"));
 	}
 }
+
+
+
+
+
+
