@@ -10,13 +10,34 @@ public class Ex11_speedCheck {
 			str = str + "a";
 		}
 		long endTime = System.currentTimeMillis(); // 로직 끝나는 시점의 1970.1.1부터의 밀리세컨
-		
+		System.out.println("String 10만번 수정 경과 시간 : "+(endTime-startTime));
 		
 		// StringBuffer 변경(10만번) - 시간체크
 		StringBuffer strBuf = new StringBuffer("A");
-		
-		
+		startTime = System.currentTimeMillis(); // 로직 시작 시점의 밀리세켠
+		for(int i=0 ; i < 100000 ; i++) {
+			strBuf.append("a");
+		}
+		endTime = System.currentTimeMillis(); // 로직 끝나는 시점의 밀리세켠
+		System.out.println("StringBuffer 10만번 수정 경과 시간 : " +(endTime - startTime));
 		// StringBuilder 변경(10만번) - 시간체크
 		StringBuilder strBuld = new StringBuilder("A");
+		startTime = System.currentTimeMillis(); // 로직 시작 시점의 밀리세켠
+		for(int i=0 ; i < 100000 ; i++) {
+			strBuld.append("a");
+		}
+		endTime = System.currentTimeMillis(); // 로직 끝나는 시점의 밀리세켠
+		System.out.println("StringBuilder 10만번 수정 경과 시간 : " +(endTime - startTime));
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
