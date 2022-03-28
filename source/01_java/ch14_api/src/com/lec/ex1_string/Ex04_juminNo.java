@@ -16,7 +16,7 @@ public class Ex04_juminNo {
 //			System.out.println("어 이상하다");
 //		}
 		// 방법2. substring 결과를 숫자로 바꿔서 비료
-//		int gender = Integer.parseInt(juminNo.substring(7, 8));
+//		int gender = Integer.parseInt(juminNo.substring(7, 8)); // "4"
 //		String msg = (gender==1 || gender==3)? "남자":
 //							(gender==2||gender==4)? "여자":"오류";
 		// 방법3. 
