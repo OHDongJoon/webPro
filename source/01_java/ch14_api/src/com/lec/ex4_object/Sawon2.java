@@ -28,14 +28,14 @@ public class Sawon2 {
 	public String toString() {// sysout(s1) => [사번]a01 [이름]홍길동 [부서]COMPUTER [입사일]2022년3월24일(목)
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년M월d일(E)");
 		String hiredateStr = sdf.format(hiredate);
-		
-		//if(dept.length()>10) {
+		String dStr = "" + dept; // "PLANNING"
+		if(dStr.length()>10) {
 			return "[사번]" + num + "\t[이름]" + name + "\t[부서]" + dept + "\t[입사일]" + hiredateStr;
-		//}else {
-			//return "[사번]" + num + "\t[이름]" + name + "\t[부서]" + dept + "\t\t[입사일]" + hiredateStr;
-		//}
-	}
-}
+		}else {
+			return "[사번]" + num + "\t[이름]" + name + "\t[부서]" + dept + "\t\t[입사일]" + hiredateStr;
+		}// if
+	}// toString
+}//class
 
 
 
