@@ -12,6 +12,7 @@ public class Ex02_PersonTestMain {
 		}else {
 			System.out.println("p1과 p2는 다른 사람");
 		}
+		System.out.println(p1.equals(p3) ? "같아":"달라");
 		if(p1==p2) {
 			System.out.println("p1과 p2는 같은 주소");
 		}else {
