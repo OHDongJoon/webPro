@@ -1,7 +1,7 @@
 package com.lec.ex3_math;
 import java.util.Random;
-// 로또번호 6개 뽑기 - 중복
-public class Ex04 {
+// 로또번호 6개 뽑기
+public class Ex05_lotto {
 	public static void main(String[] args) {
 		int[] lotto = new int[6];
 		Random random = new Random();
