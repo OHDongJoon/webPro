@@ -1,7 +1,7 @@
 package com.lec.ex4_object;
 // Rectangle r1 = new Rectangle(10,5, "»¡°­")
 // Rectangle r1 = new Rectangle();
-public class Rectangle {
+public class Rectangle implements Cloneable{
 	private int width;
 	private int height;
 	private String color;
@@ -25,7 +25,7 @@ public class Rectangle {
 	}
 	@Override
 	public boolean equals(Object obj) {
-		if(obj!=null & obj instanceof Rectangle) {
+		if(obj!=null && obj instanceof Rectangle) {
 			Rectangle tempObj = (Rectangle)obj;
 			boolean widthChk  = width == tempObj.width;
 			boolean heightChk = height == tempObj.height;
@@ -35,6 +35,12 @@ public class Rectangle {
 			return false;
 		}
 	}
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+	public void setWidth(int width) {this.width = width;}
+	public void setHeight(int height) {this.height = height;}
 }
 
 
