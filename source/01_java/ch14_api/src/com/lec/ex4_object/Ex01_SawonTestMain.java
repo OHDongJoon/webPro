@@ -5,5 +5,7 @@ public class Ex01_SawonTestMain {
 		Sawon s2 = new Sawon("a02", "신길동", Dept.HUMANRESOURCES, 2022, 3, 24);
 		System.out.println(s1); // [사번]a01 [이름]홍길동 [부서]COMPUTER [입사일]2022년3월24일(목)
 		System.out.println(s2);
+		Sawon2 s3 = new Sawon2("c01", "마길동", Dept2.PLANNING, 2022, 3, 10);
+		System.out.println(s3);
 	}
 }
