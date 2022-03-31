@@ -22,6 +22,10 @@ public class Sawon {
 		//hiredate = new Date(y-1900, m-1, d); // 입사일을 y년 m월 d일로 .
 		hiredate = new Date(new GregorianCalendar(y, m-1, d).getTimeInMillis());
 	}
+	@Override
+	public String toString() {// sysout(s1) => [사번]a01 [이름]홍길동 [부서]COMPUTER [입사일]2022년3월24일(목)
+		return "Sawon [num=" + num + ", name=" + name + ", dept=" + dept + ", hiredate=" + hiredate + "]";
+	}
 }
 
 
