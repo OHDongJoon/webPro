@@ -37,6 +37,7 @@ public class Rectangle implements Cloneable{
 	}
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
 		return super.clone();
 	}
 	public void setWidth(int width) {this.width = width;}

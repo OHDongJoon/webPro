@@ -14,5 +14,8 @@ public class Ex04_RectangleTestMain {
 		}else {
 			System.out.println("복제실패");
 		}
+		System.out.println(r1.hashCode());
+		System.out.println(r2.hashCode());
+		System.out.println(r1.getClass().getName());
 	}
 }
