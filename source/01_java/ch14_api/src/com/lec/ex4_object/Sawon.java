@@ -20,7 +20,7 @@ public class Sawon {
 		this.num = num;
 		this.name = name;
 		this.dept = dept;
-		//hiredate = new Date(y-1900, m-1, d); // 입사일을 y년 m월 d일로 .
+		// hiredate = new Date(y-1900, m-1, d); // 입사일을 y년 m월 d일로 .
 		hiredate = new Date(new GregorianCalendar(y, m-1, d).getTimeInMillis());
 	}
 	@Override

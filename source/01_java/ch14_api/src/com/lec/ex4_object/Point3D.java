@@ -1,5 +1,5 @@
 package com.lec.ex4_object;
-
+// new Point3D(1, 1, 2)
 public class Point3D implements Cloneable{
 	private double x;
 	private double y;
