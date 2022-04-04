@@ -10,4 +10,38 @@ public class Student {
 	public String toString() {
 		return grade + "ÇÐ³â " + name;
 	}
+	// equals ¿Í hashcode override
+	@Override
+	public boolean equals(Object obj) {
+		if(obj!=null && obj instanceof Student) {
+//			boolean gradeChk = grade == ((Student)obj).grade;
+//			boolean nameChk = name.equals( ((Student)obj).name);
+//			return gradeChk && nameChk;
+			return toString().equals(obj.toString());
+		}
+		return false;
+	}
+	@Override
+	public int hashCode() {
+		return toString().hashCode();
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
