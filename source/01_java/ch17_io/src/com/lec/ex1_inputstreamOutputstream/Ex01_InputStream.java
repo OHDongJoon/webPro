@@ -1,4 +1,4 @@
-package ex1_inputstreamOutputstream;
+package com.lec.ex1_inputstreamOutputstream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
