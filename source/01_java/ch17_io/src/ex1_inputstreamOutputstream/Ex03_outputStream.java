@@ -1,5 +1,8 @@
 package ex1_inputstreamOutputstream;
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 // (1)파일을연다(출력용스트림객체생성) (2)write한다 (3)파일을닫는다(스트림객체.close)
 public class Ex03_outputStream {
 	public static void main(String[] args) {
