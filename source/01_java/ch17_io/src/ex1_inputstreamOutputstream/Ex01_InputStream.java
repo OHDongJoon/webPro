@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-// (1) 파일은 연다(스트림객체생성) (2)데이터를 읽는다(read()) (3)파일을 닫는다
+// (1) 파일은 연다(입력용 스트림객체생성) (2)데이터를 읽는다(read()) (3)파일을 닫는다
 public class Ex01_InputStream {
 	public static void main(String[] args) {
 		InputStream is = null; 
