@@ -18,7 +18,7 @@ public class MemberTestMain_1_outputStream {
 		ArrayList<Member> members = new ArrayList<Member>();
 		Date now = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("MM-dd");
-		String today = sdf.format(now); 
+		String today = sdf.format(now); // "04-06"
 		do {
 			System.out.print("회원가입 하실래요(단, 원하지 않으면 N)? ");
 			answer = scanner.next();
@@ -40,7 +40,7 @@ public class MemberTestMain_1_outputStream {
 				System.out.println("생일 정보가 올바르지 않습니다. 확인해 주세요");
 				continue;
 			}
-			if(birth.equals(today)) {
+			if(today.equals(birth.substring(birth.indexOf("-")+1))) {
 				System.out.println(name+"님 생일이시군요. 생일축하합니다");
 			}
 			System.out.print("주소 ? ");
