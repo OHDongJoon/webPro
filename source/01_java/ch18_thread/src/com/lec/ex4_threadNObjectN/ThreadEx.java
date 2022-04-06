@@ -6,21 +6,17 @@ public class ThreadEx extends Thread{
 		super(name);
 	}
 	@Override
-	public  void run() {
+	public void run() {
 		for(int i = 0 ; i <10 ; i++) {
-			out();
+			if(Thread.currentThread().getName().equals("A")) {
+				System.out.println("~ ~ A 쓰레드 수행 중 ~ ~");
+				num++;
+			}
+			System.out.println(Thread.currentThread().getName()+"의 num = "+num);
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) { }
 		}//for
-	}
-	private void out() {
-		if(Thread.currentThread().getName().equals("A")) {
-			System.out.println("~ ~ A 쓰레드 수행 중 ~ ~");
-			num++;
-		}
-		System.out.println(Thread.currentThread().getName()+"의 num = "+num);
-		
 	}
 	public int getNum() {
 		return num;
