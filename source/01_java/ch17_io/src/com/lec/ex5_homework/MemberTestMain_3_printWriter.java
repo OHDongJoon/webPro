@@ -60,9 +60,8 @@ public class MemberTestMain_3_printWriter {
 				System.out.print(member);
 				printWriter.print(member.toString());
 			}
-			String msg = String.format("\t\t\t...이하 %d명 가입\n\n", members.size());
-			System.out.println(msg);
-			printWriter.print(msg);
+			System.out.printf("\t\t\t...이하 %d명 가입\n\n", members.size());
+			printWriter.printf("\t\t\t...이하 %d명 가입\n\n", members.size());
 		} catch (FileNotFoundException e) {
 			System.out.println("파일 못 찾음"+e.getMessage());
 		} catch (IOException e) {
