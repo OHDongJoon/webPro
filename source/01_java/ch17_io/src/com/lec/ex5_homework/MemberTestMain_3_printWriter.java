@@ -58,11 +58,11 @@ public class MemberTestMain_3_printWriter {
 			printWriter = new PrintWriter("src/com/lec/ex5_homework/member.txt");
 			for(Member member : members) {
 				System.out.print(member);
-				printWriter.write(member.toString());
+				printWriter.print(member.toString());
 			}
 			String msg = String.format("\t\t\t...이하 %d명 가입\n\n", members.size());
 			System.out.println(msg);
-			printWriter.write(msg);
+			printWriter.print(msg);
 		} catch (FileNotFoundException e) {
 			System.out.println("파일 못 찾음"+e.getMessage());
 		} catch (IOException e) {
