@@ -54,9 +54,8 @@ public class MemberTestMain_1_outputStream {
 		try {
 			os = new FileOutputStream("src/com/lec/ex5_homework/member.txt");
 			for(Member member : members) {
-				byte[] bs = member.toString().getBytes();
 				System.out.print(member);
-				os.write(bs);
+				os.write(member.toString().getBytes());
 			}
 			String msg = String.format("\t\t\t...이하 %d명 가입\n\n", members.size());
 			System.out.println(msg);
