@@ -43,7 +43,7 @@ public class MemberTestMain_3_printWriter {
 				System.out.println("생일 정보가 올바르지 않습니다. 확인해 주세요");
 				continue;
 			}
-			if(birth.equals(today)) {
+			if(today.equals(birth.substring(birth.indexOf("-")+1))) {
 				System.out.println(name+"님 생일이시군요. 생일축하합니다");
 			}
 			System.out.print("주소 ? ");
