@@ -10,7 +10,7 @@ public class TargetEx implements Runnable {
 			} catch (InterruptedException e) { }
 		}//for
 	}//run()
-	private void out() {
+	private synchronized void out() {
 		if(Thread.currentThread().getName().equals("A")) {// "A"쓰레드일 경우
 			System.out.println("~ ~ ~ A 쓰레드 수행중 ~ ~ ~");
 			num++;
