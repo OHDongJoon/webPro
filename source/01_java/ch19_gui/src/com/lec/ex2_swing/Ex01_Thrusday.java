@@ -1,10 +1,13 @@
 package com.lec.ex2_swing;
-import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 public class Ex01_Thrusday extends JFrame implements ActionListener{
 	private JPanel panel; // 받아온 컨테이너를 저장
 	// private Container contenPane; // 받아온 컨테이너를 저장
