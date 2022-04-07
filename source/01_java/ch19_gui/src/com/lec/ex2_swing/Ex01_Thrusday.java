@@ -19,21 +19,33 @@ public class Ex01_Thrusday extends JFrame implements ActionListener{
 		jlbl = new JLabel("즐거운 목요일", (int)CENTER_ALIGNMENT);  
 		jbtn = new JButton("EXIT");
 		
-		panel.add(jlbl);
+		add(jlbl);
 		jlbl.setPreferredSize(new Dimension(150, 200));
-		panel.add(jbtn);
+		add(jbtn);
 		jbtn.setPreferredSize(new Dimension(200, 200));
 		setVisible(true);
 		setSize(new Dimension(400, 250));
+		setLocation(2000, 50);
+		// 이벤트 리스너 추가
+		jbtn.addActionListener(this);
 	}
-	
 	@Override
 	public void actionPerformed(ActionEvent e) { // 이벤트 로직
-		// TODO Auto-generated method stub
-		
+		if(e.getSource() == jbtn) {
+			setVisible(false);
+			dispose();
+			System.exit(0);
+		}
 	}
 	public static void main(String[] args) {
 		new Ex01_Thrusday("title");
 	}
-
 }
+
+
+
+
+
+
+
+
