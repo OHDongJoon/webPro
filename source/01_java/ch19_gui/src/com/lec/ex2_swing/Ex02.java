@@ -72,18 +72,37 @@ public class Ex02 extends JFrame implements ActionListener {
 			jlBlank.setText(jtxtField.getText().trim()); // jlBlank에는 jtxtField 입력 내용 그대로
 			jtxtField.setText("");			
 		}else if(e.getSource() == jCombo) {
-			
+			String temp = jCombo.getSelectedItem().toString(); // 콤보박스 선택된 항목 ("A", "B", ....)
+			int    no    = jCombo.getSelectedIndex();
+			jlBlank.setText(no + "번째 " +temp +"선택");
+			jCombo.setSelectedItem("A"); // "A"가 선택되도록 jCombo.setSelectedIndex(0);
 		}else if(e.getSource() == jCheck) {
-			
+			if(jCheck.isSelected()) { // 체크박스 체크함
+				jlBlank.setText(jCheck.getText());
+			}else { // 체크박스 언체크함
+				jlBlank.setText("");
+			}
 		}else if(e.getSource() == jBtnExit) {
-			
+			setVisible(false);
+			dispose();
+			System.exit(0);
 		}
-		
 	}
 	public static void main(String[] args) {
 		new Ex02(); // 실행
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
