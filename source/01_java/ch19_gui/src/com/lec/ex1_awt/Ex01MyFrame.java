@@ -13,7 +13,7 @@ public class Ex01MyFrame extends Frame {
 		//pack(); // 최소한의 사이즈로
 		setSize(new Dimension(300, 200));
 		setVisible(true);
-		setLocation(100,50);
+		setLocation(2000,50);
 		
 		// 3초후 자동 창닫고 실행종료
 		try {
