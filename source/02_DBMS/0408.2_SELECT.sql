@@ -49,3 +49,6 @@ SELECT ENAME, SAL, SAL*12 "¿¬ºÀ" FROM EMP WHERE ¿¬ºÀ>2400; -- WHEREÀý¿¡´Â º°ÄªÀ»
 
 
 
+
+
+
