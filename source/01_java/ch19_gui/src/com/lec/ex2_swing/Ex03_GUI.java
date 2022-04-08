@@ -68,6 +68,24 @@ public class Ex03_GUI extends JFrame implements ActionListener {
 				return;
 			}
 			// 나이 체크
+			int age=0;
+			try {
+				age = Integer.parseInt(txtAge.getText());
+				if(age < 0 || age>150) {
+					System.out.println("유효하지 않는 나이를 입력할 경우 0살로");
+					age = 0;
+				}
+			}catch(Exception e1) {
+				System.out.println("유효하지 않는 나이를 입력할 경우 0살로");
+			}
+			System.out.println(++cnt + "명 입력됨");
+			if(cnt==1) {
+				jta.setText("이름\t전화\t\t나이\n");
+			}
+			jta.append(name + "\t"+ tel+"\t\t"+ age+"\n"); // 한명 add한 것을 jta출력
+			txtName.setText("");
+			txtTel.setText("");
+			txtAge.setText("");
 		}
 	}
 	public static void main(String[] args) {
