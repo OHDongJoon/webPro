@@ -33,7 +33,7 @@ SELECT * FROM EMP WHERE DEPTNO=10;
 SELECT EMPNO, ENAME, MGR FROM EMP WHERE ENAME = 'FORD';
 select empno, ename, mgr from emp where ename = 'FORD'; -- 데이터는 대소문자 구분
 
--- 4. 논리연산자 : AND, OR
+-- 4. 논리연산자 : AND, OR, NOT
     -- ex. 급여(SAL)가 2000이상 3000이하인 직원의 모든 필드
 SELECT * FROM EMP WHERE SAL>=2000 AND SAL<=3000;
     -- ex. 82년도에 입사한 사원의 모든 필드
@@ -45,6 +45,27 @@ SELECT ENAME, HIREDATE FROM EMP;
     -- 연봉이 2400 이상인 직원의 ENAME, SAL, 연봉 출력 (연봉 = SAL*12)
 SELECT ENAME, SAL, SAL*12 "연봉" FROM EMP WHERE SAL*12 > 2400;
 SELECT ENAME, SAL, SAL*12 "연봉" FROM EMP WHERE 연봉>2400; -- WHERE절에는 별칭을 쓸 수 없다
+SELECT ENAME, SAL, SAL*12 "연봉" 
+    FROM EMP 
+    WHERE SAL*12>2400 
+    ORDER BY 연봉; -- ORDER BY절에는 별칭 사용 가능
+    -- 10번 부서(DEPTNO)이거나 직책(JOB)이 MANAGER인 사람의 모든 필드
+SELECT * FROM EMP WHERE DEPTNO=10 OR JOB='MANAGER';
+    -- 부서번호가 10번이 아닌 사람의 모든 필드
+SELECT * FROM EMP WHERE DEPTNO != 10;
+SELECT * FROM EMP WHERE NOT DEPTNO=10;
+
+-- 5. 산술표현식
+SELECT ENAMEK, SAL "현재급여", SAL+100 "올릴급여" FROM EMP WHERE DEPTNO=10;
+    -- ex. 모든 사원의 이름(ENAME), 월급(SAL), 상여(COMM), 연봉(SAL*12+COMM)
+    -- 산술연산의 결과는 NULL포함하면 결과도 NULL
+    -- NVL(NULL일 수도 있는 필드명, 대치값) 반드시 매개변수 둘은 타입 같아야 함
+SELECT ENAME, SAL, COMM, SAL*12+COMM FROM EMP;
+SELECT ENAME, SAL, COMM, SAL*12+NVL(COMM, 0) FROM EMP;
+    -- 모든 사원의 사원명(ENAME), 상사의 사번(MGR)을 출력(상사없으면 0)
+
+
+
 
 
 
