@@ -1,2 +1,5 @@
 1. Oracle install -> cmd창 띄워 다음을 실행
 2. c:\> sqlplus system/oracle(비번) -- 시스템권한으로 oracleDB에 접근
+   c:\> sqlplus "/as sysdba
+3. user ID 생성
+SQL>create user scott identified by tiger;
