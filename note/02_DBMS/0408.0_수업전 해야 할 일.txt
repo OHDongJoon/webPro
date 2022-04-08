@@ -17,9 +17,15 @@ Grant succeeded.
 c:\>sqlplus scott/tiger
 SQL>SELECT * FROM TAB; -- 현계정의 테이블들
 
-7. 기본 데이터를 넣기 위해 demo.sql 통째로 실행
-SQL>
+7. 기본 데이터를 넣기 위해 demo.sql 통째로 실행(기본데이터 넣는 명령들 모음)
+SQL>@c:/demo.sql;
+c:\>
 
+8. scott계정에 demo.sql이 성공적으로 수행되었는지 확인
+c:\>sqlplus scott/tiger
+SQL> SELECT * FROM TAB;
+
+9. sqlDeveloper
 
 
 
